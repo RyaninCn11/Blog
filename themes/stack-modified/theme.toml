@@ -1,0 +1,13 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name        = "Stack (RyaninCn11 modified)"
+license     = "GPL-3.0-only"
+licenselink = "https://github.com/RyaninCn11/Blog/blob/main/LICENSE"
+
+min_version = "0.157.0"
+
+authors = [
+  {name = "Jimmy Cai", homepage = "jimmycai.com"},
+  {name = "RyaninCn11", homepage = "ryanincn11.me"}
+]
