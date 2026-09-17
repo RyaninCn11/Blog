@@ -46,7 +46,7 @@ darkMode   = "暗色模式"
 
 [footer]
     builtWith  = "使用 {{ .Generator }} 构建"
-    designedBy = "主题 {{ .Theme }} 由 {{ .DesignedBy }} 设计"
+    designedBy = "主题 {{ .Theme }} 由 {{ .DesignedBy }} 设计并经过 {{ .ModifiedBy }} 修改"
 
 [cookies]
     title             = "Cookie 同意"

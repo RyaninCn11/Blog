@@ -1,0 +1,39 @@
+[[social]]
+    identifier = "github"
+    name       = "GitHub"
+    url        = "https://github.com/RyaninCn11"
+
+    [social.params]
+        icon = "brand-github"
+
+[[social]]
+    identifier = "e-mail"
+    name       = "E-mail"
+    url        = "mailto:me@ryanincn11.me"
+
+    [social.params]
+        icon = "brand-email"
+
+[[social]]
+    identifier = "youtube"
+    name       = "Youtube"
+    url        = "https://youtube.com/@RyaninCn11"
+
+    [social.params]
+        icon = "brand-youtube"
+
+[[social]]
+    identifier = "x"
+    name       = "X"
+    url        = "https://x.com/RyaninCn11"
+
+    [social.params]
+        icon = "brand-x"
+
+[[social]]
+    identifier = "bilibili"
+    name       = "Bilibili"
+    url        = "https://space.bilibili.com/1413670374"
+
+    [social.params]
+        icon = "brand-bilibili"

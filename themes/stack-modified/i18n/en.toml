@@ -55,7 +55,7 @@ darkMode   = "Dark Mode"
 
 [footer]
     builtWith  = "Built with {{ .Generator }}"
-    designedBy = "Theme {{ .Theme }} designed by {{ .DesignedBy }}"
+    designedBy = "Theme {{ .Theme }} designed by {{ .DesignedBy }} and modified by {{ .ModifiedBy }}"
 
 [cookies]
     title             = "Cookie Consent"
