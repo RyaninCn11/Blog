@@ -32,8 +32,14 @@ favicon        = "img/avatar.png"
 
 [comments]
     # See complete configuration in config/_default/params.toml
-    enabled  = false
-    provider = "disqus"
+    enabled  = true
+    provider = "twikoo"
+
+    [comments.twikoo]
+        envId  = "https://ryanincn11-twikoo.netlify.app/.netlify/functions/twikoo"
+        region = ""
+        path   = "location.pathname"
+        lang   = "zh-CN"
 
 # GDPR Cookie Consent Configuration
 # When enabled, analytics and functional cookies require user consent
