@@ -54,13 +54,34 @@ SortBy         = "default"
         # Can also be set per-diagram with %%transparent%% directive
         transparentBackground = false
 
-    [article.alertIcon]
-        # Alert icons for different alert types (note, tip, important, warning, caution)
-        note      = "📝"
-        tip       = "💡"
-        important = "📌"
-        warning   = "⚠️"
-        caution   = "🚨"
+    [article.alerts]
+        # Alert definitions. Add any key here to support a custom [!TYPE] alert.
+        # Icon paths are relative to the Hugo assets folder. Use a name, icons/name,
+        # or an explicit path such as assets/icons/name.svg.
+        [article.alerts.note]
+            color      = "#4da3ff"
+            background = "rgba(77, 163, 255, 0.08)"
+            icon       = "icons/alert-note.svg"
+
+        [article.alerts.tip]
+            color      = "#3fb950"
+            background = "rgba(63, 185, 80, 0.08)"
+            icon       = "icons/alert-tip.svg"
+
+        [article.alerts.important]
+            color      = "#8457d9"
+            background = "rgba(130, 80, 223, 0.08)"
+            icon       = "icons/alert-important.svg"
+
+        [article.alerts.warning]
+            color      = "#d29922"
+            background = "rgba(210, 153, 34, 0.1)"
+            icon       = "icons/alert-warning.svg"
+
+        [article.alerts.caution]
+            color      = "#f85149"
+            background = "rgba(248, 81, 73, 0.1)"
+            icon       = "icons/alert-caution.svg"
 
 [widgets]
     homepage = []

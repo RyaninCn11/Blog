@@ -1,17 +1,19 @@
 {{ if eq .Type "alert" }}
-    {{- $type := .AlertType -}}
-    {{- $icons := site.Params.article.alertIcon -}}
-    {{- $icon := index $icons $type -}}
-    <blockquote class="alert alert-{{ $type }}">
+    {{- $type := lower .AlertType -}}
+    {{- $alert := index site.Params.article.alerts $type -}}
+    {{- if $alert -}}
+    {{- $color := $alert.color | default "var(--card-text-color-main)" -}}
+    {{- $background := $alert.background | default "var(--blockquote-background-color)" -}}
+    <blockquote class="alert alert-{{ $type }}" style="{{ printf "--alert-color: %s; --alert-background: %s;" $color $background | safeCSS }}">
         <div class="alert-header">
-            <span class="alert-icon">
-                {{- $icon -}}
+            <span class="alert-icon" aria-hidden="true">
+                {{- partial "helper/icon" $alert.icon -}}
             </span>
             <span class="alert-title">
                 {{- with .AlertTitle -}}
                     {{ . }}
                 {{- else -}}
-                    {{ or (i18n (printf "article.alert.%s" $type)) (title $type) }}
+                    {{ $alert.title | default (or (i18n (printf "article.alert.%s" $type)) (title $type)) }}
                 {{- end -}}
             </span>
         </div>
@@ -19,6 +21,11 @@
             {{ .Text }}
         </div>
     </blockquote>
+    {{- else -}}
+    <blockquote>
+        {{ .Text }}
+    </blockquote>
+    {{- end -}}
 {{ else }}
     <blockquote>
         {{ .Text }}

@@ -270,23 +270,28 @@
             font-weight: bold;
         }
 
+        .alert-icon {
+            display: inline-flex;
+            color: var(--alert-color);
+
+            svg {
+                width: 1.25em;
+                height: 1.25em;
+                stroke-width: 2;
+            }
+        }
+
         .alert-body {
             > :last-child {
                 margin-bottom: 0;
             }
         }
 
-        $alert-types: note, tip, important, warning, caution;
+        border-color: var(--alert-color);
+        background-color: var(--alert-background);
 
-        @each $type in $alert-types {
-            &.alert-#{$type} {
-                border-color: var(--alert-#{$type}-color);
-                background-color: var(--alert-#{$type}-background);
-
-                .alert-title {
-                    color: var(--alert-#{$type}-color);
-                }
-            }
+        .alert-title {
+            color: var(--alert-color);
         }
     }
 

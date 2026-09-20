@@ -15,6 +15,12 @@ favicon        = "img/avatar.png"
         enabled = true
         default = "Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)"
 
+    [article.alerts.dlgrass]
+        color      = "#a5d474"
+        background = "#a5d47414"
+        icon       = "assets/DLGrass.svg"
+        title      = "Supplemented from DLGrass"
+
 [widgets]
     homepage = [
         { type = "search" },

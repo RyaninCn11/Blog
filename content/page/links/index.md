@@ -9,6 +9,10 @@ links:
     description: 群猪）
     website: https://github.com/KOSHINOawa
     image: https://avatars.githubusercontent.com/u/183684982
+  - title: Cyberexplorer
+    description: 懒棒（他自己说的
+    website: https://cyberneko.cn
+    image: https://avatars.githubusercontent.com/u/177754635
 menu:
     main: 
         weight: -50

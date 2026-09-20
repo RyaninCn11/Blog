@@ -1,6 +1,17 @@
-{{- $iconFile := resources.GetMatch (printf "icons/%s.svg" .) -}}
+{{- $iconPath := . -}}
+{{- if hasPrefix $iconPath "assets/" -}}
+    {{- $iconPath = replaceRE "^assets/" "" $iconPath -}}
+{{- end -}}
+{{- if not (hasSuffix $iconPath ".svg") -}}
+    {{- if hasPrefix $iconPath "icons/" -}}
+        {{- $iconPath = printf "%s.svg" $iconPath -}}
+    {{- else -}}
+        {{- $iconPath = printf "icons/%s.svg" $iconPath -}}
+    {{- end -}}
+{{- end -}}
+{{- $iconFile := resources.GetMatch $iconPath -}}
 {{- if $iconFile -}}
     {{- $iconFile.Content | safeHTML -}}
 {{- else -}}
-    {{- errorf "Error: icon '%s.svg' is not found under 'assets/icons' folder" . -}}
+    {{- errorf "Error: icon '%s' is not found under the assets folder" $iconPath -}}
 {{- end -}}
